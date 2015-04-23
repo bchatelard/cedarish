@@ -4,13 +4,6 @@ exec 2>&1
 set -e
 set -x
 
-cat > /etc/apt/sources.list <<EOF
-deb http://archive.ubuntu.com/ubuntu trusty main
-deb http://archive.ubuntu.com/ubuntu trusty-security main
-deb http://archive.ubuntu.com/ubuntu trusty-updates main
-deb http://archive.ubuntu.com/ubuntu trusty universe
-EOF
-
 apt-get update
 apt-get install -y --force-yes \
     autoconf \
@@ -51,7 +44,7 @@ apt-get install -y --force-yes \
     ruby \
     ruby-dev \
     socat \
-    syslinux \
+    syslinux-common \
     tar \
     telnet \
     zip \
